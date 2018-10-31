@@ -1,9 +1,9 @@
-### HUGO MITOIRE WEB THEME 
+# HUGO MITOIRE WEB THEME 
 * [SITIO] (http://hugomitoire.com)
 
-## Descripción
+# Descripción
 
 Tema del sitio Hugo Mitoire para [WordPress] (https://wordpress.org/).
 
-# Creado por...
+## Creado por...
 * [gastoire] (https://tonga73.github.io)
