@@ -1,0 +1,42 @@
+#content-single.libros {
+    @extend .bg-dark;
+    padding-top: 7em;
+    min-height: 80vw;
+    article.row {
+        display: flex;
+        align-items: center;
+        .single-title {
+            @extend .col-sm-12;
+            @extend .order-first;
+            @extend .text-center;
+            @extend .text-light;
+        }
+        #single-img-wrapper {
+            @extend .col-6;
+            @extend .text-center;
+            img.single-img {
+                max-height: 670px;
+            }
+        }
+        .single-body {
+            @extend .col-6;
+            @extend .d-flex;
+            @extend .flex-column;
+            padding: 1em 0;
+            justify-content: center;
+            align-items: center;
+            ul {
+              @extend .list-group;
+              * {
+                  @extend .list-group-item;
+              }  
+            }
+        }
+        .single-footer {
+            @extend .col-sm-12;
+            @extend .text-light;
+            text-align: right;
+        }
+
+    }
+}

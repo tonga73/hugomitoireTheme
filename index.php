@@ -1,7 +1,7 @@
-<?php get_header(); ?>      
-      <div class="row">
-
-        <div class="col-sm-8 blog-main">
+<?php get_header(); ?>   
+<div id="blog-main" class="container-fluid">
+  <div class="row">
+        <div class="card-columns col-9 m-0">
             <?php
             if ( have_posts() ) : while ( have_posts() ) : the_post();
 
@@ -18,8 +18,8 @@
 
         </div><!-- /.blog-main -->
 
-        <?php get_sidebar(); ?>
+      <?php get_sidebar(); ?>
 
-    </div><!-- /.row -->
-
+  </div>
+</div>
 <?php get_footer(); ?>

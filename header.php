@@ -8,16 +8,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title><?php echo get_bloginfo( 'name' ); ?>&nbsp;·&nbsp;<?php echo get_bloginfo( 'description' ); ?></title>
-
     <link rel="page icon" type="image/png" href="https://booko.co.nz/favicon.png">
     
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <!-- Custom styles for this template -->
-    <link href="<?php echo bloginfo('template_directory'); ?>/blog.css" rel="stylesheet">
-
-
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -27,19 +19,27 @@
   </head>
 
   <body>
-
-    <div class="blog-masthead">
-      <div class="blog-header">
-        <header class="navbar bg-warning">
-          <span class="brand-header">
-            <h1 class="blog-title"><a href="<?php echo get_bloginfo( 'wpurl' ); ?>"><?php echo get_bloginfo( 'name' ); ?></a></h1>
-            <p class="lead blog-description"><?php echo get_bloginfo( 'description' ); ?></p>
-          </span>          
-          <nav id="blog-nav" class="nav">
-            <?php wp_list_pages( '&title_li=' ); ?>
-          </nav>
-        </header>
+    <nav id="main-header" class="navbar navbar-expand-lg navbar-dark fixed-top" role="navigation">
+      <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <span class="navbar-brand d-flex flex-column m-auto text-center">
+        <a href="<?php echo get_bloginfo( 'wpurl' );?>"><?php echo get_bloginfo( 'name' ); ?></a>
+        <small><?php echo get_bloginfo( 'description' ) ?></small>
+      </span>
+      <?php
+      wp_nav_menu( array(
+        'theme_location'    => 'primary',
+        'depth'             => 2,
+        'container'         => 'nav',
+        'container_class'   => 'collapse navbar-collapse',
+        'container_id'      => 'bs-example-navbar-collapse-1',
+        'menu_class'        => 'nav navbar-nav ml-auto barlow',
+        'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+        'walker'            => new WP_Bootstrap_Navwalker(),
+      ) );
+      ?>
       </div>
-    </div>
-
-    <div class="container">
+    </nav>

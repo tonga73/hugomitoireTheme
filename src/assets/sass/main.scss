@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+
+// Override Bootstrap Variables
+@import './override/variables.scss';
+// Helpers (Bootstrap, Custom Helpers)
+@import './helpers/all.scss';
+// Import Site Pages
+@import './pages/all.scss';
+// Import Site Components
+@import './components/all.scss';
+
+body,
+html {
+    font-family: 'Barlow';
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.pagination.navbar {
+    .page-link {
+        a {
+            @extend .nav-link;
+        }
+    }
+}

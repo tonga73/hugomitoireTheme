@@ -1,0 +1,66 @@
+.homepage {
+    margin-bottom: 100px;
+    section.jumbotron {
+        @extend .container-fluid;
+        padding-bottom: 3em;
+        border-radius: 0;
+        margin: 0;
+        div#front-jumbo-content {
+            margin-top: 10%;
+            .row {
+                background-color: rgba($dark, $alpha: 0.7);
+                padding: 1em 3em;
+            }
+        }
+    }
+    #featured-front {
+        background-color: $danger;
+    }
+    #featured-front::after {
+        content: 'LANZAMIENTO';
+        position: relative;
+        background-color: $danger;
+        color: $light;
+        font-size: 1.5em;
+        border-radius: 0 0 7px 7px;
+        padding: 10px 15px 5px 15px;
+        top: 20px;
+        left: 30px;
+    }
+    #front-content-section {
+        @extend .container-fluid;
+    }
+}
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+    .homepage {
+        section.jumbotron {
+            div#front-jumbo-content {
+                margin-top: 5.5%;
+            }
+        }
+    }
+}
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    .homepage {
+        section.jumbotron {
+            div#front-jumbo-content {
+                margin-top: 3%;
+            }
+        }
+    }
+}
+// Large devices (desktops, 992px and up)
+@media (min-width: 1200px) {
+    .homepage {
+        section.jumbotron {
+            div#front-jumbo-content {
+                margin-top: 4%;
+            }
+        }
+        #front-content-section {
+            padding: 0 3em;
+        }
+    }
+}

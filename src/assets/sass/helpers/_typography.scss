@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow:300,400,600,900|Bellefair|Cinzel+Decorative:400,700|Cinzel:400,700');
+
+* {
+    font-size: calc(12px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+    line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px)/(1600 - 300)));
+}
+
+.cinzel {
+    font-family: 'Cinzel', serif;
+}
+.cinzel-dec {
+    font-family: 'Cinzel Decorative', cursive;
+}
+.barlow {
+    font-family: 'Barlow', sans-serif;
+}
+.bellefair {
+    font-family: 'Bellefair', serif;
+}
+
+// Letter Spacing Helpers
+.ls-1 {
+    letter-spacing: 1px;
+}
+.ls-3 {
+    letter-spacing: 3px;
+}
+.ls-5 {
+    letter-spacing: 5px;
+}
+.ls-7 {
+    letter-spacing: 7px;
+}

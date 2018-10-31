@@ -1,0 +1,21 @@
+#libros-page {
+    padding: 7em 0 5em 0;
+    .libros-separator {
+        @extend .col-12;
+        border-bottom: 3px solid $warning;
+        padding: 0;
+        h2 {
+            @extend .col-3;
+            @extend .text-center;
+            border-radius: 15px 0 0 0;  
+            margin: 0;
+            margin-left: auto;
+            letter-spacing: 3px;
+            background-color: $warning;
+        }
+    }
+    div.row {
+        display: flex;
+        align-items: center;
+    }
+}
