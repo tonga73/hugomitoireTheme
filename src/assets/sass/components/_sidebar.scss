@@ -1,0 +1,56 @@
+.blog-sidebar {
+    @extend .text-light;
+    list-style: none;
+    padding-bottom: 5em;
+    background-image: url("https://www.transparenttextures.com/patterns/dark-mosaic.png");
+    .widget {
+        max-width: 100%;
+        h2 {
+            text-align: right;
+            border-bottom: 1px solid $warning;
+            padding: 0.3em 0;
+        }
+    }
+    .widget_search {
+        form {
+            height: 50px;
+            div {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: space-between;
+                label {
+                    display: none;
+                }
+                input {
+                    width: 77%;
+                    background-color: rgba($light, $alpha: 0.7);
+                    border: 0;
+                    transition: background-color ease 1s;
+                    &:focus {
+                        background-color: $light;
+                    }
+                }
+                input#searchsubmit {
+                    width: 23%;
+                    color: $secondary;
+                    &:hover {
+                        background-color: $warning;
+                        color: $dark;
+                    }
+                }
+             }
+        }
+    }
+    a {
+        color: darken($warning, $amount: 20%);
+        &:hover {
+            color: $warning;
+        }
+    }
+    @include media-breakpoint-only(sm) {
+        * {
+            font-size: 115%;
+        }
+    }
+}

@@ -1,21 +1,152 @@
+// Libros List
 #libros-page {
     padding: 7em 0 5em 0;
-    .libros-separator {
-        @extend .col-12;
-        border-bottom: 3px solid $warning;
+    .nav.nav-tabs {
+        border: 0;
         padding: 0;
-        h2 {
-            @extend .col-3;
-            @extend .text-center;
-            border-radius: 15px 0 0 0;  
-            margin: 0;
-            margin-left: auto;
-            letter-spacing: 3px;
-            background-color: $warning;
+        li {
+            position: relative;
+            a.active {
+                background-color: $dark;
+                color: $warning;
+                &:hover {
+                    background-color: $dark;
+                    color: $warning;
+                }
+            }
+            a {
+                @extend .h2; 
+                border: 0;
+                margin: 0 1px;
+                letter-spacing: 3px;
+                position: relative;
+                bottom: 1px;
+                color: $secondary;
+                background-color: darken($dark, $amount: 7%);
+                &:hover {
+                    background-color: $warning;
+                    color: $dark;
+                }
+            }
+        }
+    }
+    .tab-content {
+        border-top: 5px solid $warning;
+        a.libro {
+            img {
+                width: 100%;
+            }
+            &:hover {
+                img {
+                    opacity: 0.7;
+                }
+            }
         }
     }
     div.row {
         display: flex;
         align-items: center;
+    }
+}
+// Libro Single
+#content-single.libros {
+    @extend .bg-dark;
+    padding-top: 7em;
+    min-height: 80vw;
+    article.row {
+        display: flex;
+        align-items: center;
+        .single-title {
+            @extend .order-lg-first;
+            @extend .col-sm-12;
+            @extend .text-right;
+            @extend .text-light;
+            margin: 15px 0;
+            padding: 0.5em 0.3em;
+            border-right: 13px solid $warning;
+        }
+        #single-img-wrapper {
+            @extend .order-lg-0;
+            @extend .col-sm-12;
+            @extend .col-lg-6;
+            @extend .text-center;
+            img.single-img {
+                max-height: 670px;
+            }
+        }
+        .single-body {
+            @extend .col-sm-12;
+            @extend .col-lg-6;
+            @extend .d-flex;
+            @extend .flex-column;
+            padding: 1em 0;
+            justify-content: center;
+            align-items: center;
+            ul {
+              @extend .list-group;
+              width: 80%;
+              li {
+                  @extend .list-group-item;
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  button {
+                      @extend .btn;
+                      @extend .btn-secondary;
+                      @extend .btn-sm;
+                  }
+                  button::after {
+                    content: 'Leer';
+                  }
+              }  
+            }
+            p {
+                padding: 1em 0 0 0;
+                color: $light;
+            }
+        }
+        .single-footer {
+            @extend .col-sm-12;
+            @extend .text-light;
+            text-align: right;
+        }
+        .modal {
+            background-color: $dark;
+            .modal-dialog {
+                max-width: 80%;
+                .modal-header {
+                    align-items: center;
+                    ul.post-meta {
+                        list-style: none;
+                        margin: 0;
+                        padding: 0;
+                        li {
+                            span.post-meta-key {
+                                display: none;
+                            }
+                            @extend .cinzel;
+                            @extend .ls-3;
+                            color: $secondary;
+                            font-size: 3vw;
+                        }
+                    }
+                }
+                .modal-body {
+                    p {
+                        @extend .bellefair;
+                        font-size: 1.3em;
+                    }
+                }
+            }
+        }
+        @include media-breakpoint-only(xs) {
+            .modal {
+                margin: 0 !important;
+                padding: 0 !important;
+                .modal-dialog {
+                    max-width: 100%;
+                }
+            }
+        }
     }
 }

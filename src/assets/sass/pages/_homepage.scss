@@ -1,5 +1,5 @@
 .homepage {
-    margin-bottom: 100px;
+    margin-bottom: 170px;
     section.jumbotron {
         @extend .container-fluid;
         padding-bottom: 3em;
@@ -10,6 +10,11 @@
             .row {
                 background-color: rgba($dark, $alpha: 0.7);
                 padding: 1em 3em;
+            }
+        }
+        #libros-scrollable {
+            img {
+                min-width: 330px;
             }
         }
     }

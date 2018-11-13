@@ -1,27 +1,13 @@
-// FrontPage Horizontal Scrollable
-var button = document.getElementById('slide');
-button.onclick = function () {
-    var container = document.getElementById('libros-scrollable');
-    sideScroll(container,'right',50,170,20);
-};
-
-var back = document.getElementById('slideBack');
-back.onclick = function () {
-    var container = document.getElementById('libros-scrollable');
-    sideScroll(container,'left',50,170,20);
-};
-
-function sideScroll(element,direction,speed,distance,step){
-    scrollAmount = 0;
-    var slideTimer = setInterval(function(){
-        if(direction == 'left'){
-            element.scrollLeft -= step;
+// Header Scrolled Styles
+window.onscroll = () => {
+    window.addEventListener('scroll', () => {
+        const scrolled = window.scrollY;
+        let header = document.getElementById("main-header");
+    
+        if (scrolled === 0) {
+          header.classList.remove("scrolled");
         } else {
-            element.scrollLeft += step;
+          header.classList.add("scrolled");
         }
-        scrollAmount += step;
-        if(scrollAmount >= distance){
-            window.clearInterval(slideTimer);
-        }
-    }, speed);
-};
+      })
+}

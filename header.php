@@ -29,17 +29,17 @@
         <a href="<?php echo get_bloginfo( 'wpurl' );?>"><?php echo get_bloginfo( 'name' ); ?></a>
         <small><?php echo get_bloginfo( 'description' ) ?></small>
       </span>
-      <?php
-      wp_nav_menu( array(
-        'theme_location'    => 'primary',
-        'depth'             => 2,
-        'container'         => 'nav',
-        'container_class'   => 'collapse navbar-collapse',
-        'container_id'      => 'bs-example-navbar-collapse-1',
-        'menu_class'        => 'nav navbar-nav ml-auto barlow',
-        'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
-        'walker'            => new WP_Bootstrap_Navwalker(),
-      ) );
-      ?>
+        <?php
+        wp_nav_menu( array(
+          'theme_location'    => 'main-menu',
+          'depth'             =>  2,
+          'container'         => 'nav',
+          'container_class'   => 'collapse navbar-collapse',
+          'container_id'      => 'bs-example-navbar-collapse-1',
+          'menu_class'        => 'nav navbar-nav ml-auto barlow',
+          'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+          'walker'            =>  new WP_Bootstrap_Navwalker(),
+        ) );
+        ?>
       </div>
     </nav>

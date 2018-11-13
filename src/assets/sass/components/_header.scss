@@ -2,8 +2,21 @@
     @extend .cinzel;
     .navbar-brand {
         a {
+            @extend .ls-5;
             text-decoration: none;
             color: inherit;
+            transition: font-size ease 0.93715s;
+        }
+    }
+    nav.collapse.show {
+        background-color: darken($dark, 10%) !important;
+        text-align: center;
+        ul {
+            li {
+                a {
+                    font-size: 5vw;
+                }
+            }
         }
     }
     nav {
@@ -23,7 +36,13 @@
     }
 }
 #main-header.scrolled {
-    background-color: rgba($dark, $alpha: 0.9);
+    background-color: rgba($dark, $alpha: 1);
+    .navbar-brand {
+        a {
+            font-size: 3.7vw;
+            color: $warning;
+        }
+    }
 }
 // Small devices (landscape phones, 576px and up)
 @media (max-width: 576px) {
@@ -36,7 +55,7 @@
 @media (max-width: 992px) {
     #main-header {
         display: inline-flex;
-        padding: 0 1em;
+        padding: 0;
         .navbar-brand {
             a {
                 font-size: 7vw;
@@ -48,7 +67,7 @@
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 992px) {
     #main-header {
-        padding: 0em 1em;
+        padding: 0;
         .navbar-brand {
             a {
                 font-size: 5vw;

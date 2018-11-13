@@ -1,21 +1,9 @@
-
-        <div class="col-sm-3 text-right blog-sidebar">
-          <div class="sidebar-module sidebar-module-inset">
-            <h4>About</h4>
-            <p><?php the_author_meta( 'description' ); ?></p>
-          </div>
-          <div class="sidebar-module">
-            <h4>Archives</h4>
-            <ol class="list-unstyled">
-                <?php wp_get_archives( 'type=monthly' ); ?>
-            </ol>
-          </div>
-          <div class="sidebar-module">
-            <h4>Elsewhere</h4>
-            <ol class="list-unstyled">
-              <li><a href="<?php echo get_option('github'); ?>">GitHub</a></li>
-              <li><a href="<?php echo get_option('twitter'); ?>">Twitter</a></li>
-              <li><a href="#">Facebook</a></li>
-            </ol>
-          </div>
-        </div><!-- /.blog-sidebar -->
+<div class="blog-sidebar col-4 right-sidebar">
+   <?php if ( is_active_sidebar( 'right-sidebar-1' ) ) : ?>
+      <?php dynamic_sidebar( 'right-sidebar-1' ); ?>
+   <?php else : ?>
+   <p class="text-light h5">
+      No sidebar active.
+   </p>
+   <?php endif; ?>
+</div>

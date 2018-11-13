@@ -3,11 +3,11 @@
 */
 // Import Bootstrap
 @import './bootstrap';
+// Rotation Helpers
+@import './rotate';
 // Typo Helpers
 @import './typography';
 // Shapes CSS Helpers
 @import './shapes';
 // Scrollable Styles Helpers
-@import './scrollable';
-// Separatos Folder
-@import './separators/all';
+@import './swiper';

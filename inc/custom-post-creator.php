@@ -13,6 +13,9 @@ function create_post_libros() {
 				'editor',
 				'excerpt',
 				'thumbnail',
+				'comments',
+				'author',
+				'custom-fields'
 			), 
 			'taxonomies'   => array(
 				'post_tag',

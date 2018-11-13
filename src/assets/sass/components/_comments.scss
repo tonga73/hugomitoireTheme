@@ -1,0 +1,56 @@
+#comments {
+    color: $light;
+    padding: 0 5% 5% 5%;
+    h3 {
+        padding: 3%;
+    }
+    ul {
+        list-style: none;
+    }
+    ul.comment-list {
+        li.comment {
+            .comment-author {
+                @extend .rounded;
+                border-top: 3px solid $warning;
+                a {
+                    color: $warning;
+                }
+            }
+            .comment-meta {
+                @extend .text-right;
+                padding: 0.3em 0;
+                a {
+                    color: darken($light, $amount: 20%);
+                    &:hover {
+                        color: $light;
+                    }
+                }
+            }
+            p {
+                color: $dark;
+                background-color: $light;
+                padding: 1%;
+            }
+            .reply {
+                @extend .text-right;
+                margin-bottom: 15px;
+                a {
+                    @extend .btn;
+                    @extend .btn-sm;
+                    @extend .btn-info;
+                }
+            }
+        }
+    }
+    p {
+        display: flex;
+        flex-direction: column;
+    }
+    .form-submit {
+        text-align: right;
+        input {
+            @extend .btn;
+            @extend .btn-outline-warning;
+        }
+    }
+}

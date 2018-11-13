@@ -22,34 +22,10 @@ get_header(); ?>
               </a>
             </p>
             <div class="col-sm-12 col-lg-5 text-center mb-3">
-              <?php echo get_the_post_thumbnail( 1813 ); ?>
+              <img src="<?php echo get_the_post_thumbnail_url( 1813 ); ?>" alt="" />
             </div>
           </div>
         </div>
-          <div id="libros-scrollable">
-            <nav class="nav">
-              <button id="slideBack">
-                <i class="fas fa-arrow-left"></i>
-              </button>
-              <button id="slide">
-                <i class="fas fa-arrow-right"></i>
-              </button>
-            </nav>
-            <?php
-            $args = array( 
-              'post_type' => 'libros', 
-              'posts_per_page' => -1,
-              'cat' => '191',
-              'order' => 'ASC'
-            );
-            $loop = new WP_Query( $args );
-            while ( $loop->have_posts() ) : $loop->the_post();
-              echo '<div class="card">';
-              the_post_thumbnail( 'medium' );
-              echo '</div>';
-            endwhile;
-            ?>
-          </div>
       </section>  
     <?php } ?>
     <div id="featured-front"></div>

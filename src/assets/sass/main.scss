@@ -1,7 +1,10 @@
 * {
     box-sizing: border-box;
 }
-
+.swiper-container {
+    width: 600px;
+    height: 300px;
+}
 // Override Bootstrap Variables
 @import './override/variables.scss';
 // Helpers (Bootstrap, Custom Helpers)

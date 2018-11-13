@@ -1,11 +1,11 @@
 <?php if ( post_password_required() ) {
 	return;
 } ?>
-	<div id="comments" class="comments-area">
+	<div id="comments" class="comments-area d-flex flex-column bg-dark align-items-center justify-content-center">
 		<?php if ( have_comments() ) : ?>
 			<h3 class="comments-title">
 				<?php
-				printf( _nx( 'One comment on “%2$s”', '%1$s comments on “%2$s”', get_comments_number(), 'comments title'),
+				printf( _nx( 'Un comentario en “%2$s”', '%1$s comentarios en “%2$s”', get_comments_number(), 'comments title'),
 					number_format_i18n( get_comments_number() ), get_the_title() );
 				?>
 			</h3>
@@ -20,7 +20,7 @@
 		<?php endif; ?>
 		<?php if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
 			<p class="no-comments">
-				<?php _e( 'Comments are closed.' ); ?>
+				<?php _e( 'Comentarios cerrados.' ); ?>
 			</p>
 		<?php endif; ?>
 		<?php comment_form(); ?>

@@ -1,0 +1,11 @@
+.gallery.gallery-size-medium {
+    @extend .row;
+    dl.gallery-item {
+        @extend .col-sm-12;
+        @extend .col-md-6;
+        @extend .col-lg-4;
+        dd.gallery-caption {
+            display: none;
+        }
+    }
+}

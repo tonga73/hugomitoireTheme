@@ -1,6 +1,6 @@
 
 <footer id="main-footer" class="container-fluid bg-dark">
-  <div class="row footer-separator">
+  <div class="row">
     <?php
     if(is_active_sidebar('footer-sidebar-1')){
     dynamic_sidebar('footer-sidebar-1');
@@ -16,16 +16,26 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 <script defer src="https://use.fontawesome.com/releases/v5.4.2/js/all.js" integrity="sha384-wp96dIgDl5BLlOXb4VMinXPNiB32VYBSoXOoiARzSTXY+tsK8yDTYfvdTyqzdGGN" crossorigin="anonymous"></script>
 <script>
-  window.addEventListener('scroll', () => {
-    //const scrollable = document.documentElement.scrollHeight - window.innerHeight;
-    const scrolled = window.scrollY;
-    let header = document.getElementById("main-header");
+  var mySwiper = new Swiper ('.swiper-container', {
+    // Optional parameters
+    direction: 'vertical',
+    loop: true,
 
-    if (scrolled === 0) {
-      header.classList.remove("scrolled");
-    } else {
-      header.classList.add("scrolled");
-    }
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+    // And if we need scrollbar
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
   })
 </script>
 </body>
